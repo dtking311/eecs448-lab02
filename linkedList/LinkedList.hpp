@@ -48,7 +48,7 @@ bool LinkedList<T>::search(T value) const
 	if (temp.getNext() == nullptr){
 
 		return false;
-		
+
 	} else {
 
 		temp = temp.getNext();
@@ -110,11 +110,32 @@ bool LinkedList<T>::removeBack()
 {
 	Node<T>* lastNode = nullptr;
 	Node<T>* secondintoLast = nullptr;
-	bool isRemoved = false;
+	//bool isRemoved = false;
 
-	/** TODO
-		Fix this method
-	*/
+	if (isEmpty() == true){
+
+		return false;
+
+	}
+
+  lastNode = m_front;
+
+	for(true){
+
+		if(lastNode.getNext() == nullptr){
+
+			secondintoLast.setNext(nullptr);
+			delete lastNode;
+			return true;
+
+		} else {
+
+			secondintoLast = lastNode;
+			lastNode = lastNode.getNext();
+
+
+		}
+	}
 
 	return(isRemoved);
 }
