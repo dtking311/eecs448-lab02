@@ -46,7 +46,9 @@ bool LinkedList<T>::search(T value) const
 	}
 
 	if (temp.getNext() == nullptr){
+
 		return false;
+		
 	} else {
 
 		temp = temp.getNext();
