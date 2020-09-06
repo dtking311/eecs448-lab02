@@ -39,19 +39,19 @@ bool LinkedList<T>::search(T value) const
 
 	for (true) {
 
-	if (temp.getValue() == value){
+	if (temp->getValue() == value){
 
 			return true;
 
 	}
 
-	if (temp.getNext() == nullptr){
+	if (temp->getNext() == nullptr){
 
 		return false;
 
 	} else {
 
-		temp = temp.getNext();
+		temp = temp->getNext();
 
 	}}
 
@@ -122,16 +122,16 @@ bool LinkedList<T>::removeBack()
 
 	for(true){
 
-		if(lastNode.getNext() == nullptr){
+		if(lastNode->getNext() == nullptr){
 
-			secondintoLast.setNext(nullptr);
+			secondintoLast->setNext(nullptr);
 			delete lastNode;
 			return true;
 
 		} else {
 
 			secondintoLast = lastNode;
-			lastNode = lastNode.getNext();
+			lastNode = lastNode->getNext();
 
 
 		}
